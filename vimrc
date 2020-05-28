@@ -2,7 +2,7 @@
 set number
 set linebreak
 set showbreak=+++
-set textwidth=100
+set textwidth=79
 set showmatch
 "set spell
 set visualbell
@@ -10,6 +10,7 @@ set ruler
 set undolevels=1000
 set backspace=indent,eol,start
 set wildmenu
+"allows mouse use
 set mouse=a
 
 "Backups
@@ -32,16 +33,29 @@ set shiftround  "global
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-filetype plugin indent on
+"filetype plugin indent on
 
-"folding
+"ctags
+"set tags=./git/tags;,tags;home
+"set autochdir
+
+"Folding
 set foldmethod=indent
 set foldnestmax=2
 
-"key mapping
+"Key Mapping
+set pastetoggle=pp
 inoremap ;; <Esc>
+
+"better pane switching
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
 
 "other
 syntax on
-colorscheme darkblue
+colorscheme zellner
 
+"autocmd BufWritePre * :%s/\t/    /g
+autocmd BufWritePre * :%s/\s\+$//e
