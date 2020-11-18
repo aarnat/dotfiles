@@ -1,0 +1,4 @@
+#!/bin/bash
+# Generate i3 configs
+cat ~/dotfiles/config/i3/config.global ~/dotfiles/config/i3/config.devtop > ~/.config/i3/config
+cat ~/dotfiles/i3status.conf.global ~/dotfiles/i3status.conf.devtop > ~/.i3status.conf

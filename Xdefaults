@@ -1,0 +1,12 @@
+URxvt*scrollBar: true
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: plain
+URxvt*background: #000000
+URxvt*foreground: #00FF77
+URxvt*cursorColor: #00AA00
+URxvt*scrollColor: #777777
+URxvt*fading: 50
+URxvt*shading:50
+URxvt*transparent: true
+URxvt*url-launcher: firefox
+URxvt*font: xft:cousine:size=10
