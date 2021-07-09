@@ -29,5 +29,6 @@
     tool            = vimdiff
 
 [alias]
-    tree = log --graph --all --decorate --oneline
+    tree   = log --graph --all --decorate --oneline
+    praise = blame
 

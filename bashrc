@@ -46,3 +46,10 @@ alias iptlistin='sudo /sbin/iptables -n -v --line-numbers -L INPUT'
 alias iptlistout='sudo /sbin/iptables -n -v --line-numbers -L OUTPUT'
 alias iptlistfw='sudo /sbin/iptables -n -v --line-numbers -L FORWARD'
 
+# Enviroment Specific Aliases and Functions
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Terminal Prompt
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[0m\] $ "

@@ -1,3 +1,18 @@
+"Pathogen
+filetype off " To be updated after pathogen
+
+" Determine which pathogen plugins to load
+let g:pathogen_disabled = [ 'pathogen' ] " don't load self
+
+"Safely load clang_complete
+if v:version < 703
+    " Place Version Specific Plugins here
+    " call add(g:pathogen_disabled, 'clang_complete'
+    " call add(g:pathogen_disabled, 'syntastic')
+endif
+call pathogen#infect()      "load everything else
+call pathogen#helptags()    "load plugin helpfile
+
 "General
 set number
 set linebreak
