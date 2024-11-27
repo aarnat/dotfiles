@@ -1,0 +1,50 @@
+[user]
+    name  =
+    email =
+
+[core]
+    editor          = vim
+    excludesfile    = ~/.gitignore
+    autocrlf        = input
+
+[color]
+    ui              = auto
+
+[color "status"]
+    added           = green
+    changed         = yellow
+    untracked       = red
+
+[colors "branch"]
+    current         = yellow reverse
+    local           = yellow
+    remote          = green
+
+[color "diff"]
+    meta            = yellow bold
+    frag            = magenta bold
+    old             = red bold
+    new             = green bold
+
+[diff]
+    tool            = vimdiff
+
+[merge]
+    tool            = vimdiff
+
+[fetch]
+    prune           = true
+
+[push]
+    autoSetupRemote = true
+
+[credential]
+    helper          = store
+
+[alias]
+    tree            = log --graph --all --decorate --oneline
+    logbook         = log --stat
+    praise          = blame
+    subpall         = !git submodule foreach 'git checkout dev && git pull'
+    subsnap         = submodule update --recursive --init
+    subcheck        = submodule status --recursive
